@@ -6,5 +6,5 @@ services:
     - docker
 
 script:
-    - docker build -t centos6-lts-a centos6-lts-a
-    - docker push centos6-lts-a
+    - docker build -t lancelet/centos6-lts-a centos6-lts-a
+    - docker push lancelet/centos6-lts-a
