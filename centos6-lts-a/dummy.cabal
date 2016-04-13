@@ -1,0 +1,76 @@
+name:                dummy
+version:             0.1.0.0
+synopsis:            Dummy project
+description:         Please see README.md
+license:             Apache-2.0
+license-file:        LICENSE
+category:            Other
+build-type:          Simple
+-- extra-source-files:
+cabal-version:       >=1.10
+
+library
+  build-depends:       base >= 4.7 && < 5
+                     , aeson
+                     , async
+                     , attoparsec
+                     , base16-bytestring
+                     , binary
+                     , blaze-markup
+                     , blaze-html
+                     , byteable
+                     , bytestring
+                     , bytestring-conversion
+                     , cassava
+                     , cryptohash
+                     , containers
+                     , data-default
+                     , deepseq
+                     , derive
+                     , directory
+                     , errors
+                     , exceptions
+                     , fgl
+                     , graphviz
+                     , hashable
+                     , http-api-data
+                     , http-client
+                     , http-media
+                     , http-types
+                     , lens
+                     , mtl
+                     , pipes
+                     , pipes-aeson
+                     , pipes-attoparsec
+                     , pipes-bytestring
+                     , pipes-safe
+                     , pipes-text
+                     , process
+                     , process-extras
+                     , quickcheck-instances
+                     , random
+                     , safe
+                     , servant-blaze
+                     , servant-cassava
+                     , servant-client
+                     , servant-docs
+                     , servant-server
+                     , split
+                     , tasty
+                     , tasty-quickcheck
+                     , tasty-th
+                     , template-haskell
+                     , text
+                     , these
+                     , time
+                     , unix
+                     , unordered-containers
+                     , utf8-string
+                     , vector
+                     , wai
+                     , wai-extra
+                     , warp
+                     , tasty-hunit
+                     , transformers
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N -Wall -Werror
+  default-language:    Haskell2010
