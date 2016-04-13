@@ -1,0 +1,10 @@
+sudo: required
+
+language: c
+
+services:
+    - docker
+
+script:
+    - docker build -t lancelet/centos6-lts-5.12-custom-A centos6-lts-5.12-custom-A
+    - docker push lancelet/centos6-lts-5.12-custom-A
