@@ -20,6 +20,7 @@ ENV STACK_WORKDIR /opt/stack
 RUN mkdir $STACK_WORKDIR
 WORKDIR $STACK_WORKDIR
 ADD stack.yaml $STACK_WORKDIR/stack.yaml
+ADD dummy.cabal $STACK_WORKDIR/dummy.cabal
 
 ## Command-line tools
 WORKDIR $STACK_WORKDIR
