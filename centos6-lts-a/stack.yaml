@@ -9,4 +9,5 @@ extra-deps:
 - servant-client-0.5
 - servant-docs-0.5
 - servant-server-0.5
+- clock-0.5.1
 resolver: lts-5.12
