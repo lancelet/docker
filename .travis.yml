@@ -7,4 +7,5 @@ services:
 
 script:
     - docker build -t lancelet/centos6-lts-a centos6-lts-a
+    - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
     - docker push lancelet/centos6-lts-a
