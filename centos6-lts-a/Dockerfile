@@ -75,6 +75,7 @@ RUN $STACK install servant-cassava
 RUN $STACK install servant-client
 RUN $STACK install servant-docs
 RUN $STACK install servant-server
+RUN $STACK install shake
 RUN $STACK install split
 RUN $STACK install tasty
 RUN $STACK install tasty-quickcheck
