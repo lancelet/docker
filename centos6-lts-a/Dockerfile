@@ -4,7 +4,7 @@ MAINTAINER Jonathan Merritt <j.s.merritt@gmail.com>
 
 ENV LTS_VERSION lts-5.5
 
-## Basic dependencies 
+## Basic dependencies
 RUN yum install git gcc gcc-c++ gmp-devel zlib-devel libstdc++-devel -y
 
 ## Fetch and install stack
@@ -13,7 +13,7 @@ RUN yum -y install stack
 
 ## Haskell environment
 ENV PATH $HOME/local/.bin:$PATH
-ENV STACK stack
+ENV STACK stack --no-terminal
 ENV STACK_WORKDIR /opt/stack
 
 ## Copy across stack.yaml
@@ -24,7 +24,7 @@ ADD dummy.cabal $STACK_WORKDIR/dummy.cabal
 
 ## Command-line tools
 WORKDIR $STACK_WORKDIR
-RUN $STACK setup; 
+RUN $STACK setup;
 RUN $STACK install \
     pandoc \
     stylish-haskell \
