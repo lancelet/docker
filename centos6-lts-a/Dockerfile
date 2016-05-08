@@ -38,14 +38,14 @@ RUN $STACK install \
     attoparsec \
     base16-bytestring \
     binary \
-    blaze-markup \
     blaze-html \
+    blaze-markup \
     byteable \
     bytestring \
     bytestring-conversion \
     cassava \
-    cryptohash \
     containers \
+    cryptohash \
     data-default \
     deepseq \
     derive \
@@ -53,6 +53,7 @@ RUN $STACK install \
     errors \
     exceptions \
     fgl \
+    free \
     graphviz \
     hashable \
     http-api-data \
@@ -60,11 +61,15 @@ RUN $STACK install \
     http-media \
     http-types \
     lens \
+    monad-control \
     mtl \
+    optparse-applicative \
     pipes \
     pipes-aeson \
     pipes-attoparsec \
     pipes-bytestring \
+    pipes-csv \
+    pipes-parse \
     pipes-safe \
     pipes-text \
     process \
@@ -72,26 +77,29 @@ RUN $STACK install \
     quickcheck-instances \
     random \
     safe \
+    servant \
     servant-blaze \
     servant-cassava \
     servant-client \
     servant-docs \
+    servant-foreign \
     servant-server \
-    shake \
     split \
+    stm \
     tasty \
+    tasty-hunit \
     tasty-quickcheck \
     tasty-th \
     template-haskell \
     text \
     these \
     time \
+    transformers \
+    transformers-base \
     unix \
     unordered-containers \
     utf8-string \
     vector \
     wai \
     wai-extra \
-    warp \
-    tasty-hunit \
-    transformers
+    warp
