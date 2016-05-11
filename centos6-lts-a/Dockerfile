@@ -13,7 +13,7 @@ RUN yum -y install stack
 
 ## Haskell environment
 ENV PATH $HOME/local/.bin:$PATH
-ENV STACK stack --no-terminal
+ENV STACK stack --no-terminal --executable-profiling
 ENV STACK_WORKDIR /opt/stack
 
 ## Copy across stack.yaml
