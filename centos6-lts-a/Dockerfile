@@ -13,10 +13,12 @@ RUN yum -y install stack
 
 ## Haskell environment
 ENV PATH $HOME/local/.bin:$PATH
-ENV STACK stack \
+ENV STACK_SETUP stack setup \
+    --no-terminal \
+    --executable-profiling \
+ENV STACK_INSTALL $STACK install \
     --no-terminal \
     --executable-profiling
-ENV STACK_INSTALL $STACK \
     --no-test \
     --ghc-options -j8
 ENV STACK_WORKDIR /opt/stack
@@ -29,7 +31,7 @@ ADD dummy.cabal $STACK_WORKDIR/dummy.cabal
 
 ## Command-line tools
 WORKDIR $STACK_WORKDIR
-RUN $STACK setup;
+RUN $STACK_SETUP
 RUN $STACK_INSTALL \
     pandoc \
     stylish-haskell \
