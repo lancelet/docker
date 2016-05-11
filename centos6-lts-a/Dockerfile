@@ -15,9 +15,10 @@ RUN yum -y install stack
 ENV PATH $HOME/local/.bin:$PATH
 ENV STACK stack \
     --no-terminal \
-    --executable-profiling \
-    --no-test \
-    --ghc-options -j4
+    --executable-profiling
+ENV STACK_INSTALL $STACK \
+    --no-test
+    --ghc-options -j8
 ENV STACK_WORKDIR /opt/stack
 
 ## Copy across stack.yaml
@@ -29,14 +30,14 @@ ADD dummy.cabal $STACK_WORKDIR/dummy.cabal
 ## Command-line tools
 WORKDIR $STACK_WORKDIR
 RUN $STACK setup;
-RUN $STACK install \
+RUN $STACK_INSTALL \
     pandoc \
     stylish-haskell \
     shake
 
 ## Libraries
 WORKDIR $STACK_WORKDIR
-RUN $STACK install \
+RUN $STACK_INSTALL \
     aeson \
     async \
     attoparsec \
