@@ -14,8 +14,7 @@ RUN yum -y install stack
 ## Haskell environment
 ENV PATH $HOME/local/.bin:$PATH
 ENV STACK_SETUP stack setup \
-    --no-terminal \
-    --executable-profiling \
+    --no-terminal
 ENV STACK_INSTALL $STACK install \
     --no-terminal \
     --executable-profiling \
