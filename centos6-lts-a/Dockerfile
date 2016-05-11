@@ -17,7 +17,7 @@ ENV STACK stack \
     --no-terminal \
     --executable-profiling
 ENV STACK_INSTALL $STACK \
-    --no-test
+    --no-test \
     --ghc-options -j8
 ENV STACK_WORKDIR /opt/stack
 
