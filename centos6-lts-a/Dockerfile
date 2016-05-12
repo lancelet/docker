@@ -15,7 +15,7 @@ RUN yum -y install stack
 ENV PATH $HOME/local/.bin:$PATH
 ENV STACK_SETUP stack setup \
     --no-terminal
-ENV STACK_INSTALL $STACK install \
+ENV STACK_INSTALL stack install \
     --no-terminal \
     --executable-profiling \
     --no-test \
