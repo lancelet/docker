@@ -23,7 +23,8 @@ script:
       docker build
         -t lancelet/centos6-lts-a:$DOCKER_IMAGE_VERSION
         centos6-lts-a
-    - > docker build
+    - > 
+      docker build
         -t lancelet/centos6-lts-b:$DOCKER_IMAGE_VERSION
         centos6-lts-b
 
