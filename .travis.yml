@@ -5,7 +5,29 @@ language: c
 services:
     - docker
 
+env:
+    - DOCKER_IMAGE_VERSION=2
+
+before_script:
+    - >
+      m4
+        -DM4_DOCKER_IMAGE_VERSION="$DOCKER_IMAGE_VERSION"
+        centos6-lts-a/Dockerfile.m4 > centos6-lts-a/Dockerfile
+    - >
+      m4
+        -DM4_DOCKER_IMAGE_VERSION="$DOCKER_IMAGE_VERSION"
+        centos6-lts-b/Dockerfile.m4 > centos6-lts-b/Dockerfile
+
 script:
-    - docker build -t lancelet/centos6-lts-a centos6-lts-a
+    - >
+      docker build
+        -t lancelet/centos6-lts-a:$DOCKER_IMAGE_VERSION
+        centos6-lts-a
+    - > docker build
+        -t lancelet/centos6-lts-b:$DOCKER_IMAGE_VERSION
+        centos6-lts-b
+
+deploy:
     - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-    - docker push lancelet/centos6-lts-a
+    - docker push lancelet/centos6-lts-a:$DOCKER_IMAGE_VERSION
+    - docker push lancelet/centos6-lts-b:$DOCKER_IMAGE_VERSION

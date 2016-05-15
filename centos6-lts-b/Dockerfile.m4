@@ -1,40 +1,12 @@
-# Dockerfile for Stackage LTS-5.12 on Centos6, with some custom dependencies.
-FROM       centos:6
+# Dockerfile for Stackage LTS on Centos6, with some custom dependencies.
+FROM       lancelet/centos6-lts-a:M4-DOCKER_IMAGE_VERSION
 MAINTAINER Jonathan Merritt <j.s.merritt@gmail.com>
-
-ENV LTS_VERSION lts-5.5
-
-## Basic dependencies
-RUN yum install git gcc gcc-c++ gmp-devel zlib-devel libstdc++-devel -y
-
-## Fetch and install stack
-RUN curl -sSL https://s3.amazonaws.com/download.fpcomplete.com/centos/6/fpco.repo | tee /etc/yum.repos.d/fpco.repo
-RUN yum -y install stack
-
-## Haskell environment
-ENV PATH $HOME/local/.bin:$PATH
-ENV STACK_SETUP stack setup \
-    --no-terminal
-ENV STACK_INSTALL stack install \
-    --no-terminal \
-    --executable-profiling \
-    --no-test \
-    --ghc-options -j8
-ENV STACK_WORKDIR /opt/stack
 
 ## Copy across stack.yaml
 RUN mkdir $STACK_WORKDIR
 WORKDIR $STACK_WORKDIR
 ADD stack.yaml $STACK_WORKDIR/stack.yaml
 ADD dummy.cabal $STACK_WORKDIR/dummy.cabal
-
-## Command-line tools
-WORKDIR $STACK_WORKDIR
-RUN $STACK_SETUP
-RUN $STACK_INSTALL \
-    pandoc \
-    stylish-haskell \
-    shake
 
 ## Libraries
 WORKDIR $STACK_WORKDIR
