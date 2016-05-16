@@ -26,7 +26,7 @@ before_script:
     - ./m4-preprocess.sh
 
 script:
-    - ./docker-build.sh $image
+    - ./ticktoc.sh "./docker-build.sh $(echo $image)"
 
 after_script:
     - ./deploy.sh $image
