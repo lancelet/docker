@@ -38,4 +38,5 @@ RUN $STACK_INSTALL \
     exceptions \
     mmorph \
     attoparsec \
-    semigroups
+    semigroups \
+    haskell-src-exts
