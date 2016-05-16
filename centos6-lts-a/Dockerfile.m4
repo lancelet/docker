@@ -22,10 +22,6 @@ WORKDIR $STACK_WORKDIR
 ADD stack.yaml $STACK_WORKDIR/stack.yaml
 ADD dummy.cabal $STACK_WORKDIR/dummy.cabal
 
-## Command-line tools
+## Basic GHC install
 WORKDIR $STACK_WORKDIR
 RUN $STACK_SETUP
-RUN $STACK_INSTALL \
-    pandoc \
-    stylish-haskell \
-    shake

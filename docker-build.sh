@@ -13,6 +13,7 @@ set -v
 docker_image_dir=$1
 user=lancelet
 
+cp ./common-stack/* $docker_image_dir/.
 docker \
     build \
     -t $user/$docker_image_dir:$DOCKER_IMAGE_VERSION \

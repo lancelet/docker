@@ -15,4 +15,6 @@ script:
     - ./m4-preprocess.sh
     - ./docker-build.sh centos6-lts-a
     - ./docker-build.sh centos6-lts-b
+    - ./docker-build.sh centos6-lts-c
+    - ./docker-build.sh centos6-lts-d
     - ./deploy.sh
