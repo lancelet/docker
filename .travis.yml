@@ -5,7 +5,7 @@ env:
         - DOCKER_IMAGE_VERSION=2
         - STACK_WORKDIR=/opt/stack
         - STACK_SETUP="stack setup --no-terminal"
-        - STACK_INSTALL="stack install --no-terminal --executable-profiling --verbose"
+        - STACK_INSTALL="stack install --no-terminal --executable-profiling --cabal-verbose"
 
 matrix:
     include:
