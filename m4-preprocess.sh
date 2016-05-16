@@ -12,10 +12,10 @@ set -v
 
 # Generic substitions to make across all files.
 m4_substitutions="\
-    -DM4_DOCKER_IMAGE_VERSION=$DOCKER_IMAGE_VERSION \
-    -DM4_STACK_SETUP=$STACK_SETUP \
-    -DM4_STACK_INSTALL=$STACK_INSTALL \
-    -DM4_STACK_WORKDIR=$STACK_WORKDIR \
+    -DM4_DOCKER_IMAGE_VERSION=\"$DOCKER_IMAGE_VERSION\" \
+    -DM4_STACK_SETUP=\"$STACK_SETUP\" \
+    -DM4_STACK_INSTALL=\"$STACK_INSTALL\" \
+    -DM4_STACK_WORKDIR=\"$STACK_WORKDIR\" \
     "
 
 # Returns a filename without an m4 extension.
