@@ -6,15 +6,18 @@ services:
     - docker
 
 env:
-    - image=centos6-lts-a
-    - image=centos6-lts-b
-    - image=centos6-lts-c
-    - image=centos6-lts-d
     global:
         - DOCKER_IMAGE_VERSION=2
         - STACK_WORKDIR=/opt/stack
         - STACK_SETUP="stack setup --no-terminal"
         - STACK_INSTALL="stack install --no-terminal --executable-profiling"
+
+matrix:
+    include:
+        - env: image=centos6-lts-a
+        - env: image=centos6-lts-b
+        - env: image=centos6-lts-c
+        - env: image=centos6-lts-d
 
 before_script:
     - ./m4-preprocess.sh
