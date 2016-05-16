@@ -1,5 +1,5 @@
 # Dockerfile for Stackage LTS on Centos6, with some custom dependencies.
-FROM       lancelet/centos6-lts-a:M4-DOCKER_IMAGE_VERSION
+FROM       lancelet/centos6-lts-a:M4_DOCKER_IMAGE_VERSION
 MAINTAINER Jonathan Merritt <j.s.merritt@gmail.com>
 
 ## Copy across stack.yaml
