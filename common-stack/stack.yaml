@@ -1,6 +1,5 @@
 flags: {}
-packages:
-- '.'
+packages: []
 extra-deps:
 - control-monad-omega-0.3.1
 - servant-0.5
