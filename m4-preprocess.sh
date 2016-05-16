@@ -25,9 +25,11 @@ substituteInFile () {
     outfile=$2
     m4 \
         -DM4_DOCKER_IMAGE_VERSION="$DOCKER_IMAGE_VERSION" \
+        -DM4_STACK_PROJECTDIR="$STACK_PROJECTDIR" \
+        -DM4_STACK_WORKDIR="$STACK_WORKDIR" \
+        -DM4_STACK_YAML="$STACK_YAML" \
         -DM4_STACK_SETUP="$STACK_SETUP" \
         -DM4_STACK_INSTALL="$STACK_INSTALL" \
-        -DM4_STACK_WORKDIR="$STACK_WORKDIR" \
         $m4file > $outfile
 }
 

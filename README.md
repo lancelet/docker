@@ -36,3 +36,9 @@ This is straightforward, but annoying. One annoying part of this setup is
 keeping the version numbers of the multiple Docker images in sync. To achieve
 this, the M4 macro processor is used to substitute version numbers across the
 Dockerfiles.
+
+### Notes
+
+It's still necessary to switch to an explicit `stack` project directory (ie.
+`/opt/stack` in this case) because of this stack issue:
+https://github.com/commercialhaskell/stack/issues/1731
