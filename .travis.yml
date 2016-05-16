@@ -1,7 +1,5 @@
 sudo: required
 
-language: c
-
 env:
     global:
         - DOCKER_IMAGE_VERSION=2
@@ -13,12 +11,16 @@ matrix:
     include:
         - env: image=centos6-lts-a
           services: docker
+          language: c
         - env: image=centos6-lts-b
           services: docker
+          language: c
         - env: image=centos6-lts-c
           services: docker
+          language: c
         - env: image=centos6-lts-d
           services: docker
+          language: c
 
 before_script:
     - ./m4-preprocess.sh
@@ -27,5 +29,4 @@ script:
     - ./docker-build.sh $image
 
 after_script:
-    - ./deploy.sh
-
+    - ./deploy.sh $image
