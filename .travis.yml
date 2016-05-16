@@ -3,7 +3,8 @@ sudo: required
 language: c
 
 services:
-    - docker
+    global:
+        - docker
 
 env:
     global:
