@@ -2,6 +2,12 @@
 FROM       lancelet/centos6-lts-a:M4_DOCKER_IMAGE_VERSION
 MAINTAINER Jonathan Merritt <j.s.merritt@gmail.com>
 
+## Haskell environment
+ENV PATH $HOME/local/.bin:$PATH
+ENV STACK_SETUP M4_STACK_SETUP
+ENV STACK_INSTALL M4_STACK_INSTALL
+ENV STACK_WORKDIR M4_STACK_WORKDIR
+
 ## Copy across stack.yaml
 RUN mkdir $STACK_WORKDIR
 WORKDIR $STACK_WORKDIR

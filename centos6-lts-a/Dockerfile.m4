@@ -12,14 +12,9 @@ RUN yum -y install stack
 
 ## Haskell environment
 ENV PATH $HOME/local/.bin:$PATH
-ENV STACK_SETUP stack setup \
-    --no-terminal
-ENV STACK_INSTALL stack install \
-    --no-terminal \
-    --executable-profiling \
-    --no-test \
-    --ghc-options -j8
-ENV STACK_WORKDIR /opt/stack
+ENV STACK_SETUP M4_STACK_SETUP
+ENV STACK_INSTALL M4_STACK_INSTALL
+ENV STACK_WORKDIR M4_STACK_WORKDIR
 
 ## Copy across stack.yaml
 RUN mkdir $STACK_WORKDIR
