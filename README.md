@@ -28,8 +28,10 @@ environment can be created at this location which a later `stack` build can
 re-use.
 
 To combat the 50 minute limit on jobs at travis.org, the Docker build is split
-into two images:
+into multiple images:
   - `centos-lts-a`
+  - `centos-lts-b`
+  - `centos-lts-c`
   - `centos-lts-b`
 
 This is straightforward, but annoying. One annoying part of this setup is
