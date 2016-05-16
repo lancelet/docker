@@ -12,5 +12,4 @@ script:
     - ./m4-preprocess.sh
     - ./docker-build.sh centos6-lts-a
     - ./docker-build.sh centos6-lts-b
-
-deploy: ./deploy.sh
+    - ./deploy.sh
