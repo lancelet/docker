@@ -6,10 +6,11 @@ services:
     - docker
 
 env:
-    - DOCKER_IMAGE_VERSION=2
-    - STACK_WORKDIR=/opt/stack
-    - STACK_SETUP=stack setup --no-terminal
-    - STACK_INSTALL=stack install --no-terminal --executable-profiling
+    global:
+        - DOCKER_IMAGE_VERSION=2
+        - STACK_WORKDIR=/opt/stack
+        - STACK_SETUP=stack setup --no-terminal
+        - STACK_INSTALL=stack install --no-terminal --executable-profiling
 
 script:
     - ./m4-preprocess.sh
