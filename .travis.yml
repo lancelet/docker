@@ -8,10 +8,8 @@ services:
 env:
     - DOCKER_IMAGE_VERSION=2
 
-before_script:
-    - ./m4-preprocess.sh
-
 script:
+    - ./m4-preprocess.sh
     - ./docker-build.sh centos6-lts-a
     - ./docker-build.sh centos6-lts-b
 
