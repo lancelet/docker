@@ -37,7 +37,9 @@ RUN $STACK_INSTALL \
     errors \
     exceptions \
     fgl \
+    filepath \
     free \
+    gitrev \
     graphviz \
     hashable \
     http-api-data \
@@ -76,6 +78,7 @@ RUN $STACK_INSTALL \
     tasty-th \
     template-haskell \
     text \
+    th-lift \
     these \
     time \
     transformers \
