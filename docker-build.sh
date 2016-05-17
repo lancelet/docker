@@ -14,6 +14,12 @@ docker_image_dir=$1
 user=lancelet
 
 cp ./common-stack/* $docker_image_dir/.
+
+# Try to pull a pre-existing version of the image to avoid re-building
+docker pull \
+    $user/$docker_image_dir:$DOCKER_IMAGE_VERSION \
+    || true  # allow failure
+
 docker \
     build \
     -t $user/$docker_image_dir:$DOCKER_IMAGE_VERSION \
