@@ -2,10 +2,15 @@ sudo: required
 
 env:
     global:
-        - DOCKER_IMAGE_VERSION=2
-        - STACK_WORKDIR=/opt/stack
+        - DOCKER_IMAGE_VERSION=3
+        - STACK_PROJECTDIR=/opt/stack
+        # STACK_WORKDIR has to be relative for now, due to this issue:
+        #   https://github.com/commercialhaskell/stack/issues/1731
+        # - STACK_WORKDIR=$STACK_PROJECTDIR/.stack-work
+        - STACK_WORKDIR=./.stack-work
+        - STACK_YAML=$STACK_PROJECTDIR/stack.yaml
         - STACK_SETUP="stack setup --no-terminal"
-        - STACK_INSTALL="stack install --no-terminal --executable-profiling --cabal-verbose"
+        - STACK_INSTALL="stack install --no-terminal --executable-profiling --work-dir $STACK_WORKDIR --stack-yaml $STACK_YAML"
 
 matrix:
     include:
