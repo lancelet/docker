@@ -12,3 +12,4 @@ docker login \
     -u="$DOCKER_USERNAME" \
     -p="$DOCKER_PASSWORD"
 docker push $user/$docker_image:$DOCKER_IMAGE_VERSION
+docker push $user/$docker_image:latest

@@ -17,10 +17,11 @@ cp ./common-stack/* $docker_image_dir/.
 
 # Try to pull a pre-existing version of the image to avoid re-building
 docker pull \
-    $user/$docker_image_dir:$DOCKER_IMAGE_VERSION \
+    $user/$docker_image_dir:latest \
     || true  # allow failure
 
 docker \
     build \
+    -t $user/$docker_image_dir:latest \
     -t $user/$docker_image_dir:$DOCKER_IMAGE_VERSION \
     $docker_image_dir
