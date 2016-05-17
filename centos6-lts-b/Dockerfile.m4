@@ -28,6 +28,7 @@ RUN $STACK_INSTALL \
     byteable \
     cereal \
     cmdargs \
+    conduit \
     cryptonite \
     digest \
     dlist \
@@ -43,6 +44,7 @@ RUN $STACK_INSTALL \
     mtl \
     network \
     parsec \
+    pipes \
     primitive \
     random \
     regex-base \
