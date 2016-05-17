@@ -19,27 +19,36 @@ ADD stack.yaml $STACK_YAML
 WORKDIR $STACK_PROJECTDIR
 RUN $STACK_INSTALL \
     SHA \
+    aeson \
+    async \
+    attoparsec \
+    bytestring \
     base64-bytestring \
+    blaze-html \
     byteable \
     cereal \
     cmdargs \
+    cryptonite \
     digest \
     dlist \
+    exceptions \
     extra \
-    hslua \
-    lens \
-    mtl \
-    cryptonite \
+    haddock-library \
     happy \
+    haskell-src-exts \
+    hslua \
+    http-types \
+    lens \
+    mmorph \
+    mtl \
     network \
+    parsec \
     primitive \
+    random \
+    regex-base \
+    regex-pcre-builtin \
+    semigroups \
     socks \
     stm \
-    async \
     strict \
-    transformers-compat \
-    exceptions \
-    mmorph \
-    attoparsec \
-    semigroups \
-    haskell-src-exts
+    transformers-compat
