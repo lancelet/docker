@@ -11,3 +11,5 @@ extra-deps:
 - servant-foreign-0.5
 - clock-0.5.1
 resolver: lts-5.12
+build:
+  split-objs: true
