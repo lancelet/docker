@@ -19,7 +19,6 @@ ADD stack.yaml $STACK_YAML
 WORKDIR $STACK_PROJECTDIR
 RUN $STACK_INSTALL \
     SHA \
-    aeson \
     async \
     attoparsec \
     bytestring \
