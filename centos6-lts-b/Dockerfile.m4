@@ -39,7 +39,6 @@ RUN $STACK_INSTALL \
     haskell-src-exts \
     hslua \
     http-types \
-    lens \
     mmorph \
     mtl \
     network \
