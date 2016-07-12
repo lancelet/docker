@@ -30,6 +30,7 @@ RUN $STACK_INSTALL \
     cmdargs \
     conduit \
     cryptonite \
+    dequeue \
     digest \
     dlist \
     exceptions \
