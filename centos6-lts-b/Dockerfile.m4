@@ -39,6 +39,7 @@ RUN $STACK_INSTALL \
     happy \
     haskell-src-exts \
     hslua \
+    http-streams \
     http-types \
     lens \
     mmorph \

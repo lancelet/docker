@@ -3,7 +3,15 @@ FROM       centos:6
 MAINTAINER Jonathan Merritt <j.s.merritt@gmail.com>
 
 ## Basic dependencies
-RUN yum install git gcc gcc-c++ gmp-devel zlib-devel libstdc++-devel -y
+RUN yum install \
+    git \
+    gcc \
+    gcc-c++ \
+    gmp-devel \
+    zlib-devel \
+    libstdc++-devel \
+    openssl-devel \
+    -y
 
 ## Fetch and install stack
 ENV FPC_URL https://s3.amazonaws.com/download.fpcomplete.com
