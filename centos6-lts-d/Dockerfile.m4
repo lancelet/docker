@@ -29,10 +29,12 @@ RUN $STACK_INSTALL \
     bytestring \
     bytestring-conversion \
     cassava \
+    clock \
     containers \
     cryptohash \
     data-default \
     deepseq \
+    dequeue \
     derive \
     directory \
     errors \
@@ -70,6 +72,7 @@ RUN $STACK_INSTALL \
     servant-client \
     servant-docs \
     servant-foreign \
+    servant-lucid \
     servant-server \
     split \
     stm \
