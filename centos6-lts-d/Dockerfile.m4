@@ -34,7 +34,6 @@ RUN $STACK_INSTALL \
     cryptohash \
     data-default \
     deepseq \
-    dequeue \
     derive \
     directory \
     errors \

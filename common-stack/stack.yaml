@@ -3,3 +3,8 @@ flags: {}
 packages: []
 extra-deps:
 - clock-0.5.1
+- dequeue-0.1.12
+extra-include-dirs:
+- /usr/local/opt/openssl/include
+extra-lib-dirs:
+- /usr/local/opt/openssl/lib
