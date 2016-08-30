@@ -53,6 +53,7 @@ RUN $STACK_INSTALL \
     regex-pcre-builtin \
     semigroups \
     socks \
+    sqlite-simple \
     stm \
     strict \
     transformers-compat
